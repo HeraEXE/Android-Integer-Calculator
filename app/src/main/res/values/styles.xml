@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="NumberButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_rounded_purple</item>
+        <item name="android:textColor">@color/purple_white</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="ClearButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_rounded_red</item>
+        <item name="android:textColor">@color/purple_white</item>
+        <item name="android:textSize">40dp</item>
+    </style>
+
+    <style name="EqualsButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_rounded_green</item>
+        <item name="android:textColor">@color/purple_white</item>
+        <item name="android:textSize">40dp</item>
+    </style>
+
+    <style name="OperationButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_rounded_green_light</item>
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:textSize">40dp</item>
+    </style>
+</resources>
