@@ -17,10 +17,10 @@ class CalculatorActivity : AppCompatActivity() {
 
     private var animationListener = CalculatorAnimationListener()
 
-    private var zoomInAnim: Animation? = null
-    private var zoomOutAnim:Animation? = null
+    private lateinit var zoomInAnim: Animation
+    private lateinit var zoomOutAnim: Animation
 
-    private var resultTv: TextView? = null
+    private lateinit var resultTv: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,29 +66,29 @@ class CalculatorActivity : AppCompatActivity() {
     }
 
     private fun onNumClick(btn: View, num: String) {
-        resultTv?.text = calculator.addNum(num)
+        resultTv.text = calculator.addNum(num)
         onBtnClick(btn)
     }
 
     private fun onOperatorClick(btn: View, operator: Operator) {
-        resultTv?.text = calculator.addOperator(operator)
+        resultTv.text = calculator.addOperator(operator)
         onBtnClick(btn)
     }
 
     private fun onEqualsClick(btn: View) {
-        resultTv?.text = calculator.count()
+        resultTv.text = calculator.count()
         onBtnClick(btn)
     }
 
     private fun onClearClick(btn: View) {
-        resultTv?.text = calculator.clear()
+        resultTv.text = calculator.clear()
         onBtnClick(btn)
     }
 
     private fun onBtnClick(btn: View) {
         btn.startAnimation(zoomOutAnim)
         animationListener.view = btn
-        zoomOutAnim?.setAnimationListener(animationListener)
+        zoomOutAnim.setAnimationListener(animationListener)
     }
 
     private inner class CalculatorAnimationListener : Animation.AnimationListener {
